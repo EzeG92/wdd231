@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredCourses.forEach(course => {
         const cardHTML = `
             <div class="card ${course.completed ? 'completed' : 'not-completed'}">
-            <p>${course.subject} ${course.number}</p>
+            <h2>${course.subject} ${course.number}</h2>
             </div>
         `;
         coursesContainer.innerHTML += cardHTML;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredCourses.forEach(course => {
                 const cardHTML = `
                     <div class="card ${course.completed ? 'completed' : 'not-completed'}">
-                    <p>${course.subject} ${course.number}</p>
+                    <h2>${course.subject} ${course.number}</h2>
                     </div>
 
                 `;
