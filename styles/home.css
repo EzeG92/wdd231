@@ -74,7 +74,7 @@ header {
     flex-direction: column;
 }
 
-div h2 {
+div h2, .card1 h2, .card2 h2 {
     background-color: #caf0f8;
     font-size: 20px;
     margin: 13px 10px;
@@ -201,7 +201,7 @@ div h2 {
         row-gap: 20px;
     }
 
-    div h2 {
+    div h2, .card1 h2, .card2 h2 {
         background-color: #caf0f8;
         font-size: 22px;
         margin: 0px 0px 15px 0px;
