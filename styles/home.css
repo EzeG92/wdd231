@@ -22,7 +22,7 @@ h1 {
 }
 
 header {
-    background-color: #598392;
+    background-color: #caf0f8;
     padding: 10px;
 }
 
@@ -75,7 +75,7 @@ header {
 }
 
 div h2 {
-    background-color: #598392;
+    background-color: #caf0f8;
     font-size: 20px;
     margin: 13px 10px;
     padding: 10px;
@@ -112,7 +112,7 @@ div h2 {
 .courses {
     display: grid;
     padding: 10px;
-    row-gap: 15px;
+    row-gap: 10px;
 }
 
 .courses div h2 {
@@ -124,11 +124,12 @@ div h2 {
 }
 
 .completed {
-    background-color: #c6efce; /* o cualquier otro color que desees */
+    background-color: #124559; /* o cualquier otro color que desees */
+    color: white;
 }
 
 .not-completed {
-    background-color: #f7cac9; /* o cualquier otro color que desees */
+    background-color: lightgray; /* o cualquier otro color que desees */
 }
 
 #total-credits {
@@ -145,7 +146,7 @@ div h2 {
     margin: 0;
 	color: black;
     text-align: center;
-    background-color: #598392;
+    background-color: #caf0f8;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
@@ -201,7 +202,7 @@ div h2 {
     }
 
     div h2 {
-        background-color: #598392;
+        background-color: #caf0f8;
         font-size: 22px;
         margin: 0px 0px 15px 0px;
         padding: 18px;
