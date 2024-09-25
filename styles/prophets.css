@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #eee;
+    border: 1px solid lightblue;
+    padding: 10px;
+    text-align: center;
+    max-width: 100%; 
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 5px 0px;
+}
+
+img {
+    margin: 10px;
+}
+
+p {
+    font-size: 15px;
+    margin: 10px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: center;
+}
+
+section {
+    background-color: #eee;
+    border: 1px solid lightblue;
+    width: 350px;
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+footer {
+    padding-top: 20px;
+    text-align: center;
+}
