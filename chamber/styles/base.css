@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #A8E6CF ;
+    --tertiary-color: #FFF3E1 ;
+    --accent-color: #FF9AA2 ;
+
+    --text-sec-color: #2D2D2D;
+    --text-ter-color: #4D3319;
+    --text-acc-color: #000000;
+}
+
+/* Header content */
+header {
+    display: grid;
+    grid-template-columns: 120px auto 30px;
+    background-color: var(--secondary-color);
+    column-gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--text-sec-color);
+}
+
+.navigation {
+	list-style: none;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    margin-top: 10px;
+    grid-column: 1/4;
+}
+
+.navigation a {
+	display: none;
+	padding: 0.7rem;
+	text-align: center;
+	text-decoration: none;
+    text-transform: uppercase;
+	color: var(--text-ter-color);
+    font-weight: 600;
+}
+
+.open a {
+	display: block;
+}
+
+.chamberLogo {
+    width: 120px;
+    height: auto;
+    align-items: center;
+}
+
+#menuButton {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+}
+
+#menuButton::before {
+	content: "☰";
+    color: var(--text-sec-color);
+}
+
+#menuButton.open::before {
+    content: "X";
+    color: var(--text-sec-color);
+    font-size: 1.5rem; 
+}
+
+/* footer content */
+#footer {
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+    font-size: 15px;
+    padding: 20px;
+    margin: 0;
+	color: black;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+

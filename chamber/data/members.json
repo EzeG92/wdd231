@@ -1,0 +1,85 @@
+{
+    "members": [
+        {
+            "name": "Touche de Creme",
+            "address": "Zeballos 953",
+            "phone": "+5493413672196",
+            "website": "https://touchedecreme.com.ar/",
+            "date": "1919",
+            "imageUrl": "images/touche.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Catania",
+            "address": "Bv. Avellaneda & Zeballos",
+            "phone": "+5493414302122",
+            "website": "https://instagram.com/heladeria_catania",
+            "date": "1952",
+            "imageUrl": "images/catania.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Marbet",
+            "address": "Av. Pellegrini 1050",
+            "phone": "+5493414253567",
+            "website": "https://marbet.com.ar/",
+            "date": "1992",
+            "imageUrl": "images/marbet.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Yomo",
+            "address": "1 de Mayo 1719",
+            "phone": "+5493414495060",
+            "website": "https://yomo.com.ar/",
+            "date": "1975",
+            "imageUrl": "images/yomo.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Smart",
+            "address": "Av. Pellegrini 790",
+            "phone": "+54908107776278",
+            "website": "https://experienciasmart.com.ar/",
+            "date": "1972",
+            "imageUrl": "images/smart.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "San Remo",
+            "address": "San Lorenzo 2695",
+            "phone": "+5493414374681",
+            "website": "https://instagram.com/ssanremohelados/",
+            "date": "1968",
+            "imageUrl": "images/san-remo.webp",
+            "membershipLevel": 3
+        },
+        {
+            "name": "Americo",
+            "address": "Cordoba 1813",
+            "phone": "+5493414217746",
+            "website": "http://americoysufabrica.com/",
+            "date": "2015",
+            "imageUrl": "images/americo.webp",
+            "membershipLevel": 1
+        },
+        {
+            "name": "Gianduia",
+            "address": "Av. Pellegrini 823",
+            "phone": "+5493412701296",
+            "website": "https://gianduia.com.ar/",
+            "date": "1972",
+            "imageUrl": "images/gianduia.webp",
+            "membershipLevel": 2
+        },
+        {
+            "name": "Rio Helados",
+            "address": "Sarmiento 802",
+            "phone": "+5493417510000",
+            "website": "https://riogrupo.com/site/",
+            "date": "1966",
+            "imageUrl": "images/rio.webp",
+            "membershipLevel": 3
+        }
+    ]
+}
