@@ -15,11 +15,11 @@ const displayMembers = (members) => {
         let card = document.createElement('section');
         let logo = document.createElement('img');
         let name = document.createElement('h2');
-        let date = document.createElement('h6');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
+        let date = document.createElement('h3');
+        let address = document.createElement('h4');
+        let phone = document.createElement('h5');
         let website = document.createElement('a');
-        let membershipLevel = document.createElement('p');
+        let membershipLevel = document.createElement('h6');
 
         // Build the image element by setting attributes using setAttribute()
         logo.setAttribute('src', member.imageUrl);
@@ -53,6 +53,26 @@ const displayMembers = (members) => {
 
     });
 }
+
+// Toogle view
+const gridButton = document.querySelector('#grid');
+const listButton = document.querySelector('#list');
+const display = document.querySelector('#members-container');
+
+gridButton.addEventListener('click', () => {
+    cards.classList.remove('list');
+    cards.style.display = 'grid';
+    cards.style.flexDirection = 'initial';
+    cards.style.alignItems = 'initial';
+});
+
+listButton.addEventListener('click', () => {
+    cards.classList.add('list');
+    cards.style.display = 'flex';
+    cards.style.flexDirection = 'column';
+    cards.style.alignItems = 'center';
+});
+
 
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
