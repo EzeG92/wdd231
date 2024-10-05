@@ -36,11 +36,10 @@
     </header>
 
     <main>
-        <div>
+        <div class="heroImage">
             <picture>
-                <source srcset="" media="(min-width: 1024px)">
-                <source srcset="" media="(min-width: 768px)">
-                <img src="/chamber/images/hero-image.jpg" alt="Ice Cream hero image">
+                <source srcset="/chamber/images/hero-image.jpg" media="(min-width: 1024px)">
+                <img src="/chamber/images/hero-image-mobile.png" alt="Ice Cream hero image">
             </picture>
         </div>
 
@@ -51,26 +50,54 @@
             <button class="joinUs">Join Us</button>
         </div>
 
-
-        <section>
-            <div class="events">
-
+        <section class="events">
+            <div class="events-card">
+                <h2>Events</h2>
+                <p></p>
             </div>
         </section>
 
-        <section>
-            <div class="weather">
+        <section class="weather">
+            <div id="currentWeather">
+                <h2>Current Weather</h2>
+                <img id="weather-icon" src="" alt="">
+                <p id="current-temp"></p>
+                <p id="weather-desc"></p>
+                <p id="weather-details"></p>
+            </div>
 
+            <div id="forecastWeather">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-cards">
+                    <div class="forecast-card">
+                        <p id="forecastDate"></p>
+                        <img id="forecast-icon" src="" alt="">
+                        <p id="forecastTemp"></p>
+                        <p id="forecast-desc"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="forecastDate"></p>
+                        <img id="forecast-icon" src="" alt="">
+                        <p id="forecastTemp"></p>
+                        <p id="forecast-desc"></p>
+                    </div>
+                    <div class="forecast-card">
+                        <p id="forecastDate"></p>
+                        <img id="forecast-icon" src="" alt="">
+                        <p id="forecastTemp"></p>
+                        <p id="forecast-desc"></p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
+        <section class="business-highlight-section">
+            <div id="business-highlight-card">
+                <!-- Random business highlight will be displayed here -->
+            </div>
         </section>
+
     </main>
-
 
     <footer>
         <p id="footer"></p>
