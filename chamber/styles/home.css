@@ -55,7 +55,16 @@
     gap: 20px;
 }
 
-.events-card, #currentWeather, #forecastWeather {
+.highlight-section {
+    padding: 10px 30px;
+}
+
+#spotlights {
+    display: grid;
+    gap: 20px;
+}
+
+.events-card, #currentWeather, #forecastWeather, .spotlight {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);

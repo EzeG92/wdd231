@@ -7,7 +7,7 @@
             "website": "https://touchedecreme.com.ar/",
             "date": "1919",
             "imageUrl": "images/touche.webp",
-            "membershipLevel": 1
+            "membershipLevel": "Regular Member"
         },
         {
             "name": "Catania",
@@ -16,7 +16,7 @@
             "website": "https://instagram.com/heladeria_catania",
             "date": "1952",
             "imageUrl": "images/catania.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver Member"
         },
         {
             "name": "Marbet",
@@ -25,7 +25,7 @@
             "website": "https://marbet.com.ar/",
             "date": "1992",
             "imageUrl": "images/marbet.webp",
-            "membershipLevel": 3
+            "membershipLevel": "Gold Member"
         },
         {
             "name": "Yomo",
@@ -34,7 +34,7 @@
             "website": "https://yomo.com.ar/",
             "date": "1975",
             "imageUrl": "images/yomo.webp",
-            "membershipLevel": 1
+            "membershipLevel": "Regular Member"
         },
         {
             "name": "Smart",
@@ -43,7 +43,7 @@
             "website": "https://experienciasmart.com.ar/",
             "date": "1972",
             "imageUrl": "images/smart.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver Member"
         },
         {
             "name": "San Remo",
@@ -52,7 +52,7 @@
             "website": "https://instagram.com/ssanremohelados/",
             "date": "1968",
             "imageUrl": "images/san-remo.webp",
-            "membershipLevel": 3
+            "membershipLevel": "Gold Member"
         },
         {
             "name": "Americo",
@@ -61,7 +61,7 @@
             "website": "http://americoysufabrica.com/",
             "date": "2015",
             "imageUrl": "images/americo.webp",
-            "membershipLevel": 1
+            "membershipLevel": "Regular Member"
         },
         {
             "name": "Gianduia",
@@ -70,7 +70,7 @@
             "website": "https://gianduia.com.ar/",
             "date": "1972",
             "imageUrl": "images/gianduia.webp",
-            "membershipLevel": 2
+            "membershipLevel": "Silver Member"
         },
         {
             "name": "Rio Helados",
@@ -79,7 +79,7 @@
             "website": "https://riogrupo.com/site/",
             "date": "1966",
             "imageUrl": "images/rio.webp",
-            "membershipLevel": 3
+            "membershipLevel": "Gold Member"
         }
     ]
 }

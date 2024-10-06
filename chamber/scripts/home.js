@@ -92,3 +92,48 @@ function displayResultsForecast(data) {
     }
 }
 
+// Get member data
+const urlMembers = 'data/members.json';
+
+async function getMembersData() {
+    const response = await fetch(urlMembers); //Store the response from the fetch() method
+    const data = await response.json(); //Convert the response to a JSON object
+    if (data && data.members) {
+        displayMembers(data.members);
+    } else {
+        throw Error(await response.text());
+    }
+}
+
+getMembersData();
+
+
+// Randomly select two or three members with Gold or Silver membership level
+function getRandomMembers(members) {
+    const goldAndSilverMembers = members.filter(member => member.membershipLevel === "Gold Member" || member.membershipLevel === "Silver Member");
+    const randomMembers = [];
+    for (let i = 0; i < 3; i++) {
+        const randomIndex = Math.floor(Math.random() * goldAndSilverMembers.length);
+        randomMembers.push(goldAndSilverMembers[randomIndex]);
+        goldAndSilverMembers.splice(randomIndex, 1);
+    }
+    return randomMembers;
+}
+
+// Show randomly selected members in the "spotlights" section
+function displayMembers(members) {
+    const spotlightsSection = document.querySelector("#spotlights");
+    const randomMembers = getRandomMembers(members);
+    randomMembers.forEach(function(member) {
+        const spotlightHTML = `
+            <div class="spotlight">
+            <img src="${member.imageUrl}" alt="${member.name}" width="150px" heigth="150px">
+            <h2>${member.name}</h2>
+            <p>${member.phone}</p>
+            <p>${member.address}</p>
+            <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p>Membership Level: ${member.membershipLevel}</p>
+            </div>`;
+        spotlightsSection.innerHTML += spotlightHTML;
+    });
+}
