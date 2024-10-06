@@ -78,16 +78,16 @@ function displayResultsForecast(data) {
     const forecastCards = document.querySelectorAll('.forecast-card');
     for (let i = 1; i < 4; i ++) { // Start from tomorrow (i = 1)
         const startIndex = i * 8; // Start index for each day (readings every 3 hours)
-        const forecastDate = forecastCards[i - 1].querySelector('#forecastDate');
-        const forecastIcon = forecastCards[i - 1].querySelector('#forecast-icon');
-        const forecastTemp = forecastCards[i - 1].querySelector('#forecastTemp');
-        const forecastDesc = forecastCards[i - 1].querySelector('#forecast-desc');
+        const forecastDate = forecastCards[i - 1].querySelector('.forecastDate');
+        const forecastIcon = forecastCards[i - 1].querySelector('.forecast-icon');
+        const forecastTemp = forecastCards[i - 1].querySelector('.forecastTemp');
+        const forecastDesc = forecastCards[i - 1].querySelector('.forecast-desc');
 
         forecastDate.innerHTML = `${new Date(data.list[startIndex].dt * 1000).toLocaleDateString()}`;
-        const iconUrl = `https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${data.list[startIndex].weather[0].icon}@2x.png`;
         forecastIcon.setAttribute('src', iconUrl);
         forecastIcon.setAttribute('alt', data.list[startIndex].weather[0].description);
-        forecastTemp.innerHTML = `${Math.round(data.list[i].main.temp)}°C`;
+        forecastTemp.innerHTML = `${Math.round(data.list[startIndex].main.temp)}°C`;
         forecastDesc.innerHTML = data.list[startIndex].weather[0].description;
     }
 }
