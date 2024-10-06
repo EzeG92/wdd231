@@ -9,14 +9,14 @@
 .callToAction {
     display: grid;
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
     background-color: var(--text-sec-color);
     opacity: 0.9;
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     text-align: center;
     justify-items: center;
     padding: 15px;
@@ -35,12 +35,12 @@
     font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    width: 50%;
-    height: 20px;
+    width: 40%;
+    height: 40px;
     border: none;
     cursor: pointer;
     color: var(--text-acc-color);
-    background-color: var(--accent-color);
+    background-color: var(--tertiary-color);
     border-radius: 8px;
 }
 
@@ -153,7 +153,112 @@
 }
 
 
-
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
+
+    .callToAction {
+        display: grid;
+        position: absolute;
+        top: 35%;
+        left: 86%;
+        z-index: 2;
+        background-color: var(--text-sec-color);
+        opacity: 0.9;
+        margin: 0 auto;
+        width: 20%;
+        height: 380px;
+        align-items: center;
+    } 
+
+    .callToAction h2 {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .joinUs {
+        font-size: 20px;
+        width: 80%;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .joinUs:hover {
+        background-color: var(--accent-color);
+    }
+
+    .mainContainer {
+        margin: 15px 30px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 0.1fr 0.8fr;
+        row-gap: 20px;
+    }
+
+    .events {
+        display: grid;
+        padding: 10px 30px;
+    }
+
+    .events-card span, p {
+        padding: 10px;
+        font-size: 18px;
+        align-content: center;
+    }
+
+    .weather {
+        grid-column: 2/4;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #currentWeather {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #currentWeather img {
+        width: 120px;
+        height: auto;
+    }
+
+    #current-temp {
+        font-size: 40px;
+    }
+
+    .currentWeather-details {
+        width: 100%;
+        text-align: center;
+    }
+
+    #currentWeather h2 {
+        width: 100%;
+    }
+
+    .highlight-section {
+        margin: 10px 30px 10px 30px ;
+        row-gap: 20px;
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+
+    #spotlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .spotlight p, .spotlight h3 {
+        padding: 8px;
+    }
+
+
+
+
+
+
+
+
 
 }
