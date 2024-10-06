@@ -14,7 +14,6 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-
 // Weather cards
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
@@ -51,7 +50,6 @@ function displayResults(data) {
     weatherIcon.setAttribute('SRC', iconsrc);
     weatherIcon.setAttribute('alt', desc);
 }
-
 
 // Get the forecast weather data from the API
 const forecastUrl =  'https://api.openweathermap.org/data/2.5/forecast?lat=-32.95&lon=-60.69&units=metric&appid=5f9c58c75d5c2060c966f87b914145e4';
@@ -127,8 +125,8 @@ function displayMembers(members) {
     randomMembers.forEach(function(member) {
         const spotlightHTML = `
             <div class="spotlight">
-            <img src="${member.imageUrl}" alt="${member.name}" width="150px" heigth="150px">
-            <h2>${member.name}</h2>
+            <img src="${member.imageUrl}" alt="${member.name}" width="100px" heigth="100px">
+            <h3>${member.name}</h3>
             <p>${member.phone}</p>
             <p>${member.address}</p>
             <p><a href="${member.website}" target="_blank">${member.website}</a></p>

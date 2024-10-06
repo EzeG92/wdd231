@@ -7,7 +7,7 @@
             "website": "https://touchedecreme.com.ar/",
             "date": "1919",
             "imageUrl": "images/touche.webp",
-            "membershipLevel": "Regular Member"
+            "membershipLevel": "Gold Member"
         },
         {
             "name": "Catania",
@@ -16,7 +16,7 @@
             "website": "https://instagram.com/heladeria_catania",
             "date": "1952",
             "imageUrl": "images/catania.webp",
-            "membershipLevel": "Silver Member"
+            "membershipLevel": "Regular Member"
         },
         {
             "name": "Marbet",
@@ -52,7 +52,7 @@
             "website": "https://instagram.com/ssanremohelados/",
             "date": "1968",
             "imageUrl": "images/san-remo.webp",
-            "membershipLevel": "Gold Member"
+            "membershipLevel": "Regular Member"
         },
         {
             "name": "Americo",
@@ -61,7 +61,7 @@
             "website": "http://americoysufabrica.com/",
             "date": "2015",
             "imageUrl": "images/americo.webp",
-            "membershipLevel": "Regular Member"
+            "membershipLevel": "Silver Member"
         },
         {
             "name": "Gianduia",
