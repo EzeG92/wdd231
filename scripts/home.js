@@ -100,22 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const filteredCourses = courses;
     coursesContainer.innerHTML = '';
+
     filteredCourses.forEach(course => {
         const cardHTML = `
             <div class="card ${course.completed ? 'completed' : 'not-completed'}">
-            <h2>${course.subject} ${course.number}</h2>
+            <button class="openButton"><h2>${course.subject} ${course.number}</h2></button>
             </div>
         `;
         coursesContainer.innerHTML += cardHTML;
-
-        const totalCredits = courses.reduce((acc, course) => acc + course.credits, 0);
-        document.getElementById('total-credits').textContent = `Total credits required: ${totalCredits}`;
     });
 
     // filter courses
     selectCourses.forEach(filterCourse => {
         filterCourse.addEventListener('click', () => {
             const filter = filterCourse.getAttribute('data-course');
+
             const filteredCourses = courses.filter(course => {
                 if (filter === 'all') return true;
                 return course.subject === filter.toUpperCase();
@@ -126,15 +125,57 @@ document.addEventListener('DOMContentLoaded', () => {
             filteredCourses.forEach(course => {
                 const cardHTML = `
                     <div class="card ${course.completed ? 'completed' : 'not-completed'}">
-                    <h2>${course.subject} ${course.number}</h2>
+                    <button class="openButton"><h2>${course.subject} ${course.number}</h2></button>
                     </div>
-
                 `;
                 coursesContainer.innerHTML += cardHTML;
-
-                const totalCredits = courses.reduce((acc, course) => acc + course.credits, 0);
-                document.getElementById('total-credits').textContent = `Total credits required: ${totalCredits}`;
             });
+
+            const openButtons = document.querySelectorAll('.openButton');
+            openButtons.forEach(button => {
+                button.addEventListener('click', event => {
+                    const card = event.target.parentNode;
+                    const course = courses.find(course => course.subject === card.querySelector('h2').textContent.split(' ')[0] && course.number === parseInt(card.querySelector('h2').textContent.split(' ')[1]));
+                    displayCourseDetails(course);
+                });
+            });
+            
         });
     });
+
+    // open modal
+    const openButtons = document.querySelectorAll('.openButton');
+    openButtons.forEach(button => {
+        button.addEventListener('click', event => {
+            const card = event.target.parentNode;
+            const course = courses.find(course => course.subject === card.querySelector('h2').textContent.split(' ')[0] && course.number === parseInt(card.querySelector('h2').textContent.split(' ')[1]));
+            displayCourseDetails(course);
+        });
+    });
+
+    const courseDetails = document.getElementById('course-details');
+
+    function displayCourseDetails(courses) {
+        courseDetails.innerHTML = '';
+        courseDetails.innerHTML = `
+
+            <h2>${courses.subject} ${courses.number}<button id="closeButton">❌</button></h2>
+            <h3>${courses.title}</h3>
+            <p><strong>Credits:</strong> ${courses.credits}</p>
+            <p><strong>Certificate:</strong> ${courses.certificate}</p>
+            <p>${courses.description}</p>
+            <p><strong>Technologies:</strong> ${courses.technology.join(', ')}</p>
+        `;
+
+        const closeButton = document.getElementById('closeButton');
+        closeButton.addEventListener('click', () => {
+            courseDetails.close();
+        });
+    
+        courseDetails.showModal();
+    }
+    
+
+    const totalCredits = courses.reduce((acc, course) => acc + course.credits, 0);
+    document.getElementById('total-credits').textContent = `Total credits required: ${totalCredits}`;
 });
