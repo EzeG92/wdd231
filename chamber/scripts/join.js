@@ -14,6 +14,7 @@ const copyrightText = `&copy; ${year} Ezequiel Gimenez - Rosario, Argentina.<br>
 const footerElement = document.getElementById('footer');
 footerElement.innerHTML = copyrightText;
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const memberships = [
         {
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "modalGold",
             title: "Gold Membership",
-            cost: "4500 USD / year",
+            cost: "3500 USD / year",
             description: "The Gold category is ideal for businesses that want to maximize their presence and get the most out of the chamber of commerce's resources. With a focus on growth and expansion, this category provides exclusive benefits.",
             benefits: 
                 ["All benefits of Silver membership.",
@@ -101,9 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         membershipDetailsModal.showModal();
     }
+});
 
-    // Set current timestamp
-    document.getElementById("timestamp").value = new Date().toISOString();
+document.addEventListener('DOMContentLoaded', () => {
+    const timestampInput = document.getElementById("timestamp");
+    const currentTime = new Date();
+    timestampInput.value = currentTime.toLocaleString();
 });
 
 
