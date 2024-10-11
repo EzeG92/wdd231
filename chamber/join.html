@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Page Chamber of Commerce Rosario Argentina</title>
+    <meta name="description" content="Ice Cream Chamber of Commerce of Rosario, Argentina">
+    <meta name="author" content="Ezequiel Gimenez">
+    <meta property="og:title" content="Join Page Chamber of commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ezeg92.github.io/wdd231/chamber/join.html" />
+    <meta property="og:image" content="https://ezeg92.github.io/wdd231/chamber/images/logo-chamber.webp" />
+    <link rel="icon" href="images/logo-chamber.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-chamber.webp" alt="Logo Chamber of Commerce" class="chamberLogo">
+        <h1>Ice Cream <br>Chamber of Commerce</h1>
+        <button id="menuButton" aria-label="Menu"></button>
+
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="#" title="Discover">Discover</a>
+            <a href="directory.html" title="Directory">Directory</a>
+            <a href="join.html" title="Join">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <form method="get" action="thankyou.html" class="form">
+                <fieldset>
+                    <legend>Membership Application Form</legend>
+                    <div class="form-item">
+                        <label for="firstName">First Name: *</label>
+                        <input type="text" id="firstName" name="firstName" title="Applicant's First Name" required
+                            autocomplete="given-name">
+                    </div>
+                    <div class="form-item">
+                        <label for="lastName">Last Name: *</label>
+                        <input type="text" id="lastName" name="lastName" title="Applicant's First Name" required
+                            autocomplete="given-name">
+                    </div>
+                    <div class="form-item">
+                        <label for="orgTitle">Organizational Title: * </label>
+                        <input type="text" id="orgTitle" name="orgTitle" title="Your Title in the Organization"
+                            pattern="[A-Za-z\s-]{7,}" required autocomplete="organization-title">
+                    </div>
+                    <div class="form-item">
+                        <label for="email">Email: *</label>
+                        <input type="email" id="email" name="email" title="Applicant's Email" required
+                            autocomplete="email" placeholder="example@example.com">
+                    </div>
+                    <div class="form-item">
+                        <label for="phone">Phone: *</label>
+                        <input type="tel" id="phone" name="phone" title="Applicant's Phone Number" required
+                            autocomplete="tel">
+                    </div>
+                    <div class="form-item">
+                        <label for="orgName">Organization Name: * </label>
+                        <input type="text" id="orgName" name="orgName" title="Business/Organization Name" required
+                            autocomplete="organization">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Select Membership Level</legend>
+                    <div class="form-item">
+                        <input type="radio" id="NP" name="membership" value="NP">
+                        <label for="NP">Non-Profit (No Fee)</label>
+                        <br>
+                        <input type="radio" id="bronze" name="membership" value="bronze">
+                        <label for="bronze">Bronze Membership</label>
+                        <br>
+                        <input type="radio" id="silver" name="membership" value="silver">
+                        <label for="silver">Silver Membership</label>
+                        <br>
+                        <input type="radio" id="gold" name="membership" value="gold">
+                        <label for="gold">Gold Membership</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business/Organization Description</legend>
+                    <div class="form-item">
+                        <label for="description">Description:</label> <br>
+                        <textarea id="description" name="description"
+                            title="Description of your business/organization"></textarea>
+                    </div>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                <input type="submit" class="small" value="JOIN US">
+            </form>
+
+            <div class="membership-cards">
+                <div class="cardMember" id="card1">
+                    <h2>Non-Profit Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div class="cardMember" id="card2">
+                    <h2>Bronze Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div class="cardMember" id="card3">
+                    <h2>Silver Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+
+                <div class="cardMember" id="card3">
+                    <h2>Gold Membership</h2>
+                    <button class="learnMore">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="membership-details" class="modal"> </dialog>
+
+    </main>
+
+    <footer>
+        <p id="footer"></p>
+    </footer>
+
+</body>
+
+</html>
