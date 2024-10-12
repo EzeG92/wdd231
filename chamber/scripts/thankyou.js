@@ -14,7 +14,6 @@ const copyrightText = `&copy; ${year} Ezequiel Gimenez - Rosario, Argentina.<br>
 const footerElement = document.getElementById('footer');
 footerElement.innerHTML = copyrightText;
 
-
 // Grab the entire URL
 const currentUrl = window.location.href
 
@@ -39,7 +38,6 @@ function show(data) {
 const showInfo = document.querySelector('#thanks');
 showInfo.innerHTML = `
     <h2>Thank you for your submission!<br>We will be in touch with you soon.</h2>
-
     <p>${show("firstName")} ${show("lastName")}</p>
     <p>${show("email")}</p>
     <p>${show("phone")}</p>
