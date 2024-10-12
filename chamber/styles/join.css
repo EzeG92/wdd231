@@ -180,16 +180,10 @@ dialog h2 {
     background-color: #ffd60a;
 }
 
-.membership-cards div {
+.membership-cards div.loaded {
     transform: translateY(-20px);
     transition: transform 1.5s;
     transition-delay: 0.3s;
-}
-
-.membership-cards div.loaded {
-    opacity: 0;
-    transform: translateY(0);
-    animation: stagger 1s;
 }
 
 @keyframes stagger {

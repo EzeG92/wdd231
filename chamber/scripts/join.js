@@ -111,4 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
     timestampInput.value = currentTime.toLocaleString();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const membershipCards = document.querySelectorAll(".membership-cards div");
+    membershipCards.forEach(card => card.classList.add("loaded"));
+});
+
+
+
 
