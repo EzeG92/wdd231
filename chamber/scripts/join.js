@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "modalBronze",
             title: "Bronze Membership",
-            cost: "1500 USD / year",
+            cost: "800 USD / year",
             description: "The Bronze category is perfect for small businesses or entrepreneurs who want to be part of the ice cream business network, with access to basic resources and promotion within the community.",
             benefits: 
                 ["Inclusion in the chamber\u2019s business directory.",
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "modalSilver",
             title: "Silver Membership",
-            cost: "2200 USD / year",
+            cost: "1300 USD / year",
             description: "The Silver membership offers additional benefits for businesses seeking to increase their visibility and take advantage of better growth opportunities in the industry.",
             benefits: 
                 ["All benefits of Bronze membership.",
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "modalGold",
             title: "Gold Membership",
-            cost: "3500 USD / year",
+            cost: "2000 USD / year",
             description: "The Gold category is ideal for businesses that want to maximize their presence and get the most out of the chamber of commerce's resources. With a focus on growth and expansion, this category provides exclusive benefits.",
             benefits: 
                 ["All benefits of Silver membership.",
@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Open Modal
     const openButtons = document.querySelectorAll('.learnMore');
+    const membershipDetailsModal = document.getElementById('membership-details');
+
 
     openButtons.forEach(button => {
         button.addEventListener('click', event => {
@@ -75,12 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const membershipTitle = card.querySelector('h2').textContent;
             const membership = memberships.find(m => m.title === membershipTitle);
             displayMembershipsDetails(membership);
+
+            membershipDetailsModal.classList.add('open');
         });
     });
-
-    console.log(memberships); 
-
-    const membershipDetailsModal = document.getElementById('membership-details');
 
     function displayMembershipsDetails(membership) {
         membershipDetailsModal.innerHTML = '';
@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <h2>${membership.title}<button id="closeButton">❌</button></h2>
             <h3>${membership.cost}</h3>
-            <p><strong>Description:</strong> ${membership.description}</p>
-            <p><strong>Benefits:</strong></p>
+            <p><strong>Description</strong> <br>${membership.description}</p>
+            <p><strong>Benefits</strong></p>
             <ul>
                 ${membership.benefits.map(benefits => `<li>${benefits}</li>`).join('')}
             </ul>
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const closeButton = document.getElementById('closeButton');
         closeButton.addEventListener('click', () => {
+            membershipDetailsModal.classList.remove('open');
             membershipDetailsModal.close();
         });
 

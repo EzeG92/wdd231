@@ -17,20 +17,15 @@ footerElement.innerHTML = copyrightText;
 
 // Grab the entire URL
 const currentUrl = window.location.href
-console.log(currentUrl)
 
 // Divide the url into two parts
 const everything = currentUrl.split('?')
-console.log(everything)
 
 // Grab just the second half
 let formData = everything[1].split('&')
-console.log(formData)
 
 function show(data) {
-    console.log(data)
     formData.forEach((element) => {
-        console.log(element)
         if (element.startsWith(data)) {
             result=element.split('=')[1]
             result=result.replace("+"," ")
@@ -43,12 +38,13 @@ function show(data) {
 // Show the result
 const showInfo = document.querySelector('#thanks');
 showInfo.innerHTML = `
-    <h2>Thank you for your submission! We will be in touch with you soon.</h2>
+    <h2>Thank you for your submission!<br>We will be in touch with you soon.</h2>
 
-    <p>Name: ${show("firstName")} ${show("lastName")}</p>
-    <p>Email: ${show("email")}</p>
-    <p>Phone: ${show("phone")}</p>
+    <p>${show("firstName")} ${show("lastName")}</p>
+    <p>${show("email")}</p>
+    <p>${show("phone")}</p>
     <p>Bussines: ${show("orgName")}</p>
+    <p>Membership level: ${show("membership")}</p>
 `;
 
 // Show the timestamp
@@ -62,9 +58,11 @@ function formatTimestamp(timestamp) {
     const second = date.getSeconds();
 
     // Add leading zeros if necessary
+    const formattedHour = hour < 10 ? `0${hour}` : hour;
     const formattedMinute = minute < 10 ? `0${minute}` : minute;
+    const formattedSecond = second < 10 ? `0${second}` : second;
 
-    return `${month}/${day}/${year} - ${hour}:${formattedMinute}:${second}`;
+    return `${month}/${day}/${year} - ${formattedHour}:${formattedMinute}:${formattedSecond}`;
 }
 
 // Display the timestamp

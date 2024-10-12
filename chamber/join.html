@@ -37,20 +37,20 @@
 
     <main>
         <div class="main-content">
-            <form method="get" action="thankyou.html" class="form">
+            <form method="get" action="thankyou.html">
                 <fieldset>
                     <legend>Membership Application Form</legend>
-                    <div class="form-item">
+                    <div>
                         <label for="firstName">First Name: *</label>
                         <input type="text" id="firstName" name="firstName" title="Applicant's First Name" required
                             autocomplete="given-name">
                     </div>
-                    <div class="form-item">
+                    <div>
                         <label for="lastName">Last Name: *</label>
                         <input type="text" id="lastName" name="lastName" title="Applicant's First Name" required
                             autocomplete="given-name">
                     </div>
-                    <div class="form-item">
+                    <div>
                         <label for="orgTitle">Organizational Title: </label>
                         <input type="text" id="orgTitle" name="orgTitle" title="Your Title in the Organization"
                             pattern="[A-Za-z\s-]{7,}" autocomplete="organization-title">
@@ -60,12 +60,12 @@
                         <input type="email" id="email" name="email" title="Applicant's Email" required
                             autocomplete="email" placeholder="example@example.com">
                     </div>
-                    <div class="form-item">
+                    <div>
                         <label for="phone">Phone: *</label>
                         <input type="tel" id="phone" name="phone" title="Applicant's Phone Number" required
                             autocomplete="tel">
                     </div>
-                    <div class="form-item">
+                    <div>
                         <label for="orgName">Organization Name: * </label>
                         <input type="text" id="orgName" name="orgName" title="Business/Organization Name" required
                             autocomplete="organization">
@@ -74,16 +74,16 @@
 
                 <fieldset>
                     <legend>Select Membership Level</legend>
-                    <div class="form-item">
+                    <div class="radio-group">
                         <input type="radio" id="NP" name="membership" value="NP">
                         <label for="NP">Non-Profit (No Fee)</label>
-                        <br>
+
                         <input type="radio" id="bronze" name="membership" value="bronze">
                         <label for="bronze">Bronze Membership</label>
-                        <br>
+
                         <input type="radio" id="silver" name="membership" value="silver">
                         <label for="silver">Silver Membership</label>
-                        <br>
+
                         <input type="radio" id="gold" name="membership" value="gold">
                         <label for="gold">Gold Membership</label>
                     </div>
@@ -91,7 +91,7 @@
 
                 <fieldset>
                     <legend>Business/Organization Description</legend>
-                    <div class="form-item">
+                    <div>
                         <label for="description">Description:</label> <br>
                         <textarea id="description" name="description"
                             title="Description of your business/organization"></textarea>
@@ -99,26 +99,27 @@
                 </fieldset>
 
                 <input type="hidden" id="timestamp" name="timestamp" value="">
-                <input type="submit" class="small" value="JOIN US">
+                <input type="submit" class="submitButton" value="join us">
             </form>
 
             <div class="membership-cards">
-                <div class="cardMember" id="card1">
+                <h2>Memberships Levels</h2>
+                <div id="card1">
                     <h2>Non-Profit Membership</h2>
                     <button class="learnMore">Learn More</button>
                 </div>
 
-                <div class="cardMember" id="card2">
+                <div id="card2">
                     <h2>Bronze Membership</h2>
                     <button class="learnMore">Learn More</button>
                 </div>
 
-                <div class="cardMember" id="card3">
+                <div id="card3">
                     <h2>Silver Membership</h2>
                     <button class="learnMore">Learn More</button>
                 </div>
 
-                <div class="cardMember" id="card4">
+                <div id="card4">
                     <h2>Gold Membership</h2>
                     <button class="learnMore">Learn More</button>
                 </div>
