@@ -44,6 +44,11 @@
     border-radius: 8px;
 }
 
+.joinUs a {
+    text-decoration: none;
+    color: var(--text-acc-color);
+}
+
 .events {
     display: grid;
     padding: 10px 30px;
