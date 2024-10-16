@@ -15,7 +15,6 @@ hamButton.addEventListener('click', () => {
 });
 
 
-
 //Save page visits to localstorage to show different messages
 const visitDay = localStorage.getItem('visitDay');
 const visitCount = localStorage.getItem('visitCount');
