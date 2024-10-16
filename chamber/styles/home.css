@@ -388,4 +388,13 @@
     .img7, .img2, .img4 {
         grid-column: 3/4;
     }
+
+    .discover-images img{
+        transform: scale(1);
+        transition: transform 0.6s;
+    }
+
+    .discover-images img:hover {
+        transform: scale(1.1);
+    }
 }
