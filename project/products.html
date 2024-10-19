@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezk Pc Store Home Page</title>
+    <meta name="description" content="Home Page of Ezk Pc Store">
+    <meta name="author" content="Ezequiel Gimenez">
+    <meta property="og:title" content="Home page Ezk Pc Store" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="images/ezk-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/products.css">
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/ezk-logo.png" alt="Logo Ezk Pc Store" class="ezkLogo" width="150">
+        <h1>EZK PC STORE</h1>
+        <button id="menuButton" aria-label="Menu"></button>
+
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="products.html" title="Products">Products</a>
+            <a href="distributors.html" title="Distributors">Distributors</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="heroImage">
+            <img src="images/banner-products.webp" alt="hero image" width="100%">
+        </div>
+
+        <div class="categoriesProducts">
+            <h2>Categories</h2>
+            <div id="categories" class="category">
+                <img id="category1" src="images/motherboards.webp" alt="motherboards" width="180">
+                <img id="category2" src="images/graphic-card.webp" alt="graphic-card" width="180">
+                <img id="category3" src="images/processors.webp" alt="processors" width="180">
+                <img id="category4" src="images/memory.webp" alt="memory" width="180">
+                <img id="category5" src="images/monitors.webp" alt="monitors" width="180">
+                <img id="category6" src="images/cases.webp" alt="cases" width="180">
+            </div>
+
+            <h2 id="product-title" class="hidden">Products</h2>
+            <div id="products" class="products hidden">
+                <!-- Category 1 Products -->
+                <div id="category1-products" class="hidden">
+                    <div class="product">
+                        <img src="images/mother1.webp" alt="Motherboard 1" width="180">
+                        <p>ROG STRIX Z490-H</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/mother2.webp" alt="Motherboard 2" width="180">
+                        <p>GIGABYTE AORUS X299</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/mother3.webp" alt="Motherboard 3" width="180">
+                        <p>MSI MPG B550</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/mother4.webp" alt="Motherboard 4" width="180">
+                        <p>ASUS TUF GAMING B450M</p>
+                    </div>
+                </div>
+
+                <!-- Category 2 Products -->
+                <div id="category2-products" class="hidden">
+                    <div class="product">
+                        <img src="images/graphic-card1.webp" alt="graphic-card 1" width="180">
+                        <p>MSI Ventus GeForce RTX 3060</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/graphic-card2.webp" alt="graphic-card 2" width="180">
+                        <p>ASUS TUF GAMING RTX 4090 24GB</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/graphic-card3.webp" alt="graphic-card 3" width="180">
+                        <p>ASUS RADEON RX6700</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/graphic-card4.webp" alt="graphic-card 4" width="180">
+                        <p>SENTEY RADEON RX500</p>
+                    </div>
+                </div>
+
+                <!-- Category 3 Products -->
+                <div id="category2-products" class="hidden">
+                    <div class="product">
+                        <img src="images/cpu1.webp" alt="cpu 1" width="180">
+                        <p>INTEL CORE I5 12th</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/cpu2.webp" alt="cpu 2" width="180">
+                        <p>INTEL CORE I7 14th</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/cpu3.webp" alt="cpu 3" width="180">
+                        <p>INTEL CORE I9 14th</p>
+                    </div>
+                    <div class="product">
+                        <img src="images/cpu4.webp" alt="cpu 4" width="180">
+                        <p>AMD RYZEN 5</p>
+                    </div>
+                </div>
+
+                <!-- Category 4 Products -->
+                <div id="category2-products" class="hidden">
+                    <div class="product">
+                        <img src="product7.jpg" alt="Product 13">
+                        <p>4K UHD Monitor</p>
+                    </div>
+                    <div class="product">
+                        <img src="product8.jpg" alt="Product 14">
+                        <p>Wireless Gaming Keyboard</p>
+                    </div>
+                    <div class="product">
+                        <img src="product9.jpg" alt="Product 15">
+                        <p>High-Speed Gaming Router</p>
+                    </div>
+                    <div class="product">
+                        <img src="product10.jpg" alt="Product 16">
+                        <p>Customizable RGB Lighting Kit</p>
+                    </div>
+                </div>
+
+                <!-- Category 5 Products -->
+                <div id="category2-products" class="hidden">
+                    <div class="product">
+                        <img src="product7.jpg" alt="Product 17">
+                        <p>4K UHD Monitor</p>
+                    </div>
+                    <div class="product">
+                        <img src="product8.jpg" alt="Product 18">
+                        <p>Wireless Gaming Keyboard</p>
+                    </div>
+                    <div class="product">
+                        <img src="product9.jpg" alt="Product 19">
+                        <p>High-Speed Gaming Router</p>
+                    </div>
+                    <div class="product">
+                        <img src="product10.jpg" alt="Product 20">
+                        <p>Customizable RGB Lighting Kit</p>
+                    </div>
+                </div>
+
+                <!-- Category 6 Products -->
+                <div id="category2-products" class="hidden">
+                    <div class="product">
+                        <img src="product7.jpg" alt="Product 21">
+                        <p>4K UHD Monitor</p>
+                    </div>
+                    <div class="product">
+                        <img src="product8.jpg" alt="Product 22">
+                        <p>Wireless Gaming Keyboard</p>
+                    </div>
+                    <div class="product">
+                        <img src="product9.jpg" alt="Product 23">
+                        <p>High-Speed Gaming Router</p>
+                    </div>
+                    <div class="product">
+                        <img src="product10.jpg" alt="Product 24">
+                        <p>Customizable RGB Lighting Kit</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <h2>EZK PC STORE</h2>
+        <p>123 Main Street, Suite 575</p>
+        <p>Tech District, New York, NY 10001, USA</p>
+        <p>+1 (123) 456-7890</p>
+        <div>
+            <img src="images/instagram.png" alt="instagram logo" width="20">
+            <img src="images/tik-tok.png" alt="tik tok logo" width="20">
+            <img src="images/twitter.png" alt="twitter logo" width="20">
+        </div>
+        <p id="footer"></p>
+    </footer>
+</body>

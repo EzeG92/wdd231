@@ -1,0 +1,156 @@
+@import url(base.css);
+
+main {
+    background-color: var(--primary-color);
+}
+
+.callToAction {
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+    text-align: center;
+    row-gap: 25px;
+    color: var(--secondary-color);
+}
+
+.callToAction h2 {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--paragraph-font)
+}
+
+.callToAction span {
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--accent2-color);;
+}
+
+.contactButton {
+    background-color: var(--accent2-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: var(--paragraph-font);
+    border: none;
+}
+
+.contactButton a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.featuredProducts {
+    background-color: var(--secondary-color);
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 40px 8px;
+    
+}
+
+.featuredContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    padding-bottom: 20px;
+}
+
+.featuredContainer img {
+    border-radius: 8px;
+}
+
+.benefits {
+    background-color: var(--secondary-color);
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+    row-gap: 25px;
+    padding-bottom: 25px;
+}
+
+.benefits div h2 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.benefits div {
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    padding: 20px;
+}
+
+.benefits button {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 50%;
+}
+
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    background: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+dialog h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.open {
+    text-align: center;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    row-gap: 15px;
+}

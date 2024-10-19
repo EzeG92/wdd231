@@ -1,0 +1,38 @@
+@import url(base.css);
+
+main {
+    background-color: var(--primary-color);
+}
+
+.categoriesProducts {
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 30px 8px;
+}
+
+.categoriesProducts h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.category {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 15px;
+    padding-bottom: 20px;
+}
+
+.category img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(242, 242, 242, 0.6);
+}
+
+.hidden {
+    display: none;
+}

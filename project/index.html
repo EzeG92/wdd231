@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezk Pc Store Home Page</title>
+    <meta name="description" content="Home Page of Ezk Pc Store">
+    <meta name="author" content="Ezequiel Gimenez">
+    <meta property="og:title" content="Home page Ezk Pc Store" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="images/ezk-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/ezk-logo.png" alt="Logo Ezk Pc Store" class="ezkLogo" width="150">
+        <h1>EZK PC STORE</h1>
+        <button id="menuButton" aria-label="Menu"></button>
+
+        <nav class="navigation">
+            <a href="index.html" title="Home">Home</a>
+            <a href="products.html" title="Products">Products</a>
+            <a href="distributors.html" title="Distributors">Distributors</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="heroImage">
+            <img src="images/hero-image.webp" alt="hero image" width="100%">
+        </div>
+
+        <div class="callToAction">
+            <h2><span>Take your sales to the next level.</span>
+                Discover our exclusive catalog of components and accessories for gaming and design. Stock your store
+                with the best in the market and gain a competitive edge!
+                <span>Become a distributor and enjoy special wholesale pricing</span>
+            </h2>
+            <button class="contactButton"><a href="distributors.html">I want to be a distributor</a></button>
+        </div>
+
+        <div class="featuredProducts">
+            <h2>FEATURED PRODUCTS</h2>
+            <div class="featuredContainer">
+                <img src="images/graphic-card.webp" alt="graphic-card" width="180">
+                <img src="images/motherboards.webp" alt="motherboards" width="180">
+                <img src="images/processors.webp" alt="processors" width="180">
+                <img src="images/monitors.webp" alt="monitors" width="180">
+            </div>
+        </div>
+
+        <div class="benefits">
+            <h2>How would it benefit you<br>to sell our products?</h2>
+            <div id="benefit1">
+                <img src="images/dolar.png" alt="ico dolar" width="40">
+                <h2>Exclusive Wholesale Pricing</h2>
+                <p>Gain access to special discounts on all our products, ensuring competitive profit margins for your
+                    business. Secure the best brands in gaming and design components at preferential prices.</p>
+                <button class="readMore">Read More</button>
+            </div>
+
+            <div id="benefit2">
+                <img src="images/support.png" alt="ico dolar" width="40">
+                <h2>Priority Support</h2>
+                <p>Enjoy dedicated technical and commercial assistance. Our team of experts is available to help you
+                    maximize your sales and optimize your catalog with high-demand products.</p>
+                <button class="readMore">Read More</button>
+            </div>
+
+            <div id="benefit3">
+                <img src="images/new.png" alt="ico dolar" width="40">
+                <h2>Early Access to New Releases</h2>
+                <p>Be among the first to receive the latest tech innovations. As a distributor, you’ll get early access
+                    to new products, helping you stay ahead of the market.</p>
+                <button class="readMore">Read More</button>
+            </div>
+        </div>
+        <dialog id="benefits-details" class="modal"> </dialog>
+    </main>
+
+    <footer>
+        <h2>EZK PC STORE</h2>
+        <p>123 Main Street, Suite 575</p>
+        <p>Tech District, New York, NY 10001, USA</p>
+        <p>+1 (123) 456-7890</p>
+        <div>
+            <img src="images/instagram.png" alt="instagram logo" width="20">
+            <img src="images/tik-tok.png" alt="tik tok logo" width="20">
+            <img src="images/twitter.png" alt="twitter logo" width="20">
+        </div>
+        <p id="footer"></p>
+    </footer>
+
+</body>
+
+</html>
