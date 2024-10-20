@@ -35,7 +35,6 @@ h1 {
 .navigation {
 	list-style: none;
     width: 100%;
-    background-color: ;
     margin-top: 10px;
     grid-column: 1/4;
     border-radius: 8px;
@@ -107,7 +106,6 @@ footer img {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        background-color: ;
         grid-column: 3/5;
     }
 
