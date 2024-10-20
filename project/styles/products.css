@@ -36,3 +36,27 @@ main {
 .hidden {
     display: none;
 }
+
+.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.product {
+    margin: 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 170px;
+    cursor: pointer;
+}
+
+.product p {
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}

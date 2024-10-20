@@ -67,3 +67,35 @@ document.addEventListener('DOMContentLoaded', () => {
         benefitsDetails.showModal();
     }
 });
+
+// Function to show products based on selected category
+function showProducts(category) {
+    // Hide all product sections
+    const productSections = document.querySelectorAll('.products > div');
+    productSections.forEach(section => section.classList.add('hidden'));
+
+    // Show the selected category's products
+    document.getElementById(category + '-products').classList.remove('hidden');
+
+    // Show the products container and title
+    document.getElementById('products').classList.remove('hidden');
+    document.getElementById('product-title').classList.remove('hidden');
+}
+
+// Add event listeners to category images
+document.addEventListener('DOMContentLoaded', function() {
+    const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
+
+    categories.forEach(category => {
+        document.getElementById(category).addEventListener('click', function() {
+            // Elimina la clase 'active' de todas las categorías
+            categories.forEach(cat => {
+                document.getElementById(cat + '-products').classList.remove('active');
+            });
+
+            // Muestra los productos de la categoría seleccionada
+            showProducts(category);
+            document.getElementById(category + '-products').classList.add('active');
+        });
+    });
+});
