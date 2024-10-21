@@ -88,14 +88,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     categories.forEach(category => {
         document.getElementById(category).addEventListener('click', function() {
-            // Elimina la clase 'active' de todas las categorías
+            // Remove 'active' class from all categories
             categories.forEach(cat => {
+                document.getElementById(cat).classList.remove('active');
                 document.getElementById(cat + '-products').classList.remove('active');
             });
 
-            // Muestra los productos de la categoría seleccionada
-            showProducts(category);
+            // Add 'active' class to the clicked category
+            document.getElementById(category).classList.add('active');
             document.getElementById(category + '-products').classList.add('active');
+
+            // Shows products from the selected category
+            showProducts(category);
+            
+
+            // Scroll to the product bin
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
         });
     });
 });

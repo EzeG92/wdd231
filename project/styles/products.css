@@ -33,8 +33,14 @@ main {
 }
 
 .category img {
+    width: 150px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(242, 242, 242, 0.6);
+}
+
+.category img.active {
+    border: 1px solid var(--accent2-color);
+    transform: scale(1.1);
 }
 
 .hidden {
