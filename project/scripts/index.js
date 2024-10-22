@@ -1,4 +1,6 @@
 import { apiFetch } from "./api.js";
+import { createProducts } from './products.js';
+import { showProducts } from "./products.js";
 
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
@@ -15,8 +17,9 @@ const copyrightText = `&copy; ${year} Ezk Pc Store - All rights reserved.`;
 const footerElement = document.getElementById('footer');
 footerElement.innerHTML = copyrightText;
 
-// Benefits modal content
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Benefits modal content
     const benefits = [
         {
             id: "benefit1",
@@ -37,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
-    // Open modal
+    // Open benefit modal
     const openModal = document.querySelectorAll('.readMore');
     const benefitsDetails = document.getElementById('benefits-details');
 
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Create modal card
+    // Create benefit modal card
     function displayBenefitsDetails(benefit) {
         benefitsDetails.innerHTML = '';
         benefitsDetails.innerHTML = `
@@ -68,26 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         benefitsDetails.showModal();
     }
-});
 
-// Function to show products based on selected category
-function showProducts(category) {
-    // Hide all product sections
-    const productSections = document.querySelectorAll('.products > div');
-    productSections.forEach(section => section.classList.add('hidden'));
+    // Fetch products on page load
+    document.getElementById('category1').addEventListener('click', () => createProducts('motherboards'));
+    document.getElementById('category2').addEventListener('click', () => createProducts('graphic'));
+    document.getElementById('category3').addEventListener('click', () => createProducts('processors'));
+    document.getElementById('category4').addEventListener('click', () => createProducts('memory'));
+    document.getElementById('category5').addEventListener('click', () => createProducts('monitors'));
+    document.getElementById('category6').addEventListener('click', () => createProducts('cases'));
 
-    // Show the selected category's products
-    document.getElementById(category + '-products').classList.remove('hidden');
-
-    // Show the products container and title
-    document.getElementById('products').classList.remove('hidden');
-    document.getElementById('product-title').classList.remove('hidden');
-}
-
-// Add event listeners to category images
-document.addEventListener('DOMContentLoaded', function() {
+    
     const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
-
     categories.forEach(category => {
         document.getElementById(category).addEventListener('click', function() {
             // Remove 'active' class from all categories
@@ -102,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Shows products from the selected category
             showProducts(category);
-            
+
 
             // Scroll to the product bin
             document.getElementById('product-title').scrollIntoView({ behavior: 'smooth' });
