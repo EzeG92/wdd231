@@ -13,7 +13,7 @@ main {
     row-gap: 20px;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding: 30px 8px;
+    padding: 30px 8px 40px 8px;
 }
 
 .categoriesProducts h2 {
@@ -69,4 +69,49 @@ main {
     margin-top: 5px;
     font-size: 14px;
     color: var(--secondary-color);
+}
+
+#currency-converter {
+    width: 320px;
+    height: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    font-family: "Montserrat", sans-serif;
+    align-content: center;
+}
+
+#currency-converter h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 10px;  
+}
+
+#currency-converter label {
+    display: block;
+    margin-top: 10px;
+}
+
+#currency-converter input, 
+#currency-converter select, 
+#currency-converter button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#currency-converter button {
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
 }

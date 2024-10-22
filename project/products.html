@@ -196,6 +196,29 @@
                     </div>
                 </div>
             </div>
+
+            <div id="currency-converter">
+                <h3>Currency Converter</h3>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+
+                <label for="from-currency">From:</label>
+                <input type="text" id="from-currency" value="USD" readonly>
+
+                <label for="to-currency">To:</label>
+                <select id="to-currency">
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="JPY">Japanese Yen (JPY)</option>
+                    <option value="GBP">British Sterling (GBP)</option>
+                    <option value="CAD">Canadian Dollar (CAD)</option>
+                    <option value="CNY">Chinese Renminbi/Yuan(CNY)</option>
+                    <option value="ARS">Argentinian Peso (ARS)</option>
+                </select>
+
+                <button id="convert-button">Convert</button>
+
+                <p id="result">Conversion result:<br><span id="conversion-result"></span></p>
+            </div>
         </div>
     </main>
 
