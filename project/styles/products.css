@@ -71,6 +71,54 @@ main {
     color: var(--secondary-color);
 }
 
+dialog {
+    display: none;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    background: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+.modal.open {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 8px;
+    row-gap: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal.open  h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#modal-image {
+    width: 250px;
+}
+
 #currency-converter {
     width: 320px;
     height: 400px;
@@ -115,3 +163,5 @@ main {
     margin-top: 20px;
     font-weight: bold;
 }
+
+

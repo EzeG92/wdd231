@@ -1,6 +1,5 @@
 import { apiFetch } from "./api.js";
-import { createProducts } from './products.js';
-import { showProducts } from "./products.js";
+import { createProducts, showProducts, displayProductsDetails, openProductModal, setupCloseButton } from './products.js';
 
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
@@ -73,13 +72,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Fetch products on page load
-    document.getElementById('category1').addEventListener('click', () => createProducts('motherboards'));
-    document.getElementById('category2').addEventListener('click', () => createProducts('graphic'));
-    document.getElementById('category3').addEventListener('click', () => createProducts('processors'));
-    document.getElementById('category4').addEventListener('click', () => createProducts('memory'));
-    document.getElementById('category5').addEventListener('click', () => createProducts('monitors'));
-    document.getElementById('category6').addEventListener('click', () => createProducts('cases'));
-
+    document.getElementById('category1').addEventListener('click', () => {
+        createProducts('motherboards'),
+        showProducts('motherboards');
+        openProductModal();
+        setupCloseButton();
+    });
+    document.getElementById('category2').addEventListener('click', () => {
+        createProducts('graphic'),
+        showProducts('graphic');
+        openProductModal();
+        setupCloseButton();
+    });
+    document.getElementById('category3').addEventListener('click', () => {
+        createProducts('processors'),
+        showProducts('processors');
+        openProductModal();
+        setupCloseButton();
+    });
+    document.getElementById('category4').addEventListener('click', () => {
+        createProducts('memory'),
+        showProducts('memory');
+        openProductModal();
+        setupCloseButton();
+    });
+    document.getElementById('category5').addEventListener('click', () => {
+        createProducts('monitors'),
+        showProducts('monitors');
+        openProductModal();
+        setupCloseButton();
+    });
+    document.getElementById('category6').addEventListener('click', () => {
+        createProducts('cases'),
+        showProducts('cases');
+        openProductModal();
+        setupCloseButton();
+    });
     
     const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
     categories.forEach(category => {
