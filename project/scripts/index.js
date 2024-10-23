@@ -1,21 +1,5 @@
 import { apiFetch } from "./api.js";
-import { createProducts, showProducts, openProductModal, setupCloseButton } from './products.js';
-
-//add event listener to menu button and nav links
-const hamButton = document.querySelector('#menuButton');
-const navigation = document.querySelector('.navigation');
-
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
-});
-
-//add content to footer
-const year = new Date().getFullYear();
-const copyrightText = `&copy; ${year} Ezk Pc Store - All rights reserved.`;
-const footerElement = document.getElementById('footer');
-footerElement.innerHTML = copyrightText;
-
+import { createProducts, showProducts, openProductModal, setupCloseButton} from './products.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Benefits modal content
@@ -109,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setupCloseButton();
     });
 
-    
     const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
     categories.forEach(category => {
         document.getElementById(category).addEventListener('click', function() {
@@ -132,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 apiFetch();
 
