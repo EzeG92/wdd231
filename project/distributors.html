@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/distributors.css">
     <script src="scripts/distributors.js" defer></script>
 </head>
 
@@ -35,6 +35,80 @@
     </header>
 
     <main>
+        <div class="main-content">
+            <h1>Distributor Application Form</h1>
+            <form action="/submit_application" method="POST">
+                <!-- Basic Company Information -->
+                <fieldset>
+                    <legend>Basic Company Information</legend>
+                    <label for="company-name">Company Name: *</label>
+                    <input type="text" id="company-name" name="company_name" required>
+
+                    <label for="address">Business Address: *</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="phone">Phone Number: *</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Corporate Email: *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="website">Website or Social Media:</label>
+                    <input type="url" id="website" name="website">
+                </fieldset>
+
+                <!-- Primary Contact Information -->
+                <fieldset>
+                    <legend>Primary Contact Information</legend>
+                    <label for="contact-name">Full Name: *</label>
+                    <input type="text" id="contact-name" name="contact_name" required>
+
+                    <label for="position">Position: *</label>
+                    <input type="text" id="position" name="position" required>
+
+                    <label for="contact-phone">Phone Number: *</label>
+                    <input type="tel" id="contact-phone" name="contact_phone" required>
+                </fieldset>
+
+                <!-- Business Information -->
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label for="sector">Main Sector: *</label>
+                    <input type="text" id="sector" name="sector" placeholder="e.g., Technology, Gaming, Design"
+                        required>
+
+                    <label for="years">Years in Business:</label>
+                    <input type="number" id="years" name="years">
+
+                    <label for="coverage">Coverage Region: *</label>
+                    <input type="text" id="coverage" name="coverage"
+                        placeholder="Local, Regional, National, International" required>
+                </fieldset>
+
+                <!-- Financial and Operational Information -->
+                <fieldset>
+                    <legend>Financial and Operational Information</legend>
+                    <label for="sales">Estimated Monthly/Annual Sales: *</label>
+                    <input type="number" id="sales" name="sales" required>
+
+                    <label for="logistics">Logistical Capacity:</label>
+                    <input type="text" id="logistics" name="logistics" placeholder="Warehouse, Transportation, etc.">
+                </fieldset>
+
+                <!-- Commercial References -->
+                <fieldset>
+                    <legend>Commercial References</legend>
+                    <label for="current-suppliers">List of Current Suppliers:</label>
+                    <textarea id="current-suppliers" name="current_suppliers"></textarea>
+
+                    <label for="experience">Experience with Tech Wholesalers: *</label>
+                    <textarea id="experience" name="experience" placeholder="Any experience you consider relevant"
+                        required></textarea>
+                </fieldset>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
 
     </main>
 
