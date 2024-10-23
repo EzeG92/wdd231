@@ -210,6 +210,7 @@ export function showProducts() {
     // Show the products container and title
     document.getElementById('products').classList.remove('hidden');
     document.getElementById('product-title').classList.remove('hidden');
+    
 }
 
 export function openProductModal() {
@@ -247,5 +248,4 @@ export function setupCloseButton() {
         });
     }
 }
-
 

@@ -1,5 +1,5 @@
 import { apiFetch } from "./api.js";
-import { createProducts, showProducts, displayProductsDetails, openProductModal, setupCloseButton } from './products.js';
+import { createProducts, showProducts, openProductModal, setupCloseButton } from './products.js';
 
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         openProductModal();
         setupCloseButton();
     });
+
     
     const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
     categories.forEach(category => {

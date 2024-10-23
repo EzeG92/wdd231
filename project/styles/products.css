@@ -80,7 +80,7 @@ dialog {
 }
 
 dialog button {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 600;
     position: absolute;
@@ -97,36 +97,39 @@ dialog button {
     text-align: center;
     display: grid;
     justify-items: center;
+    font-weight: 600;
     top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--accent1-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 20px;
-    border: 1px solid var(--accent1-color);
     border-radius: 8px;
     row-gap: 10px;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
+    border: none;
 }
 
 .modal.open  h2 {
     font-size: 16px;
     text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
 #modal-image {
-    width: 250px;
+    width: 300px;
 }
 
 #currency-converter {
     width: 320px;
     height: 400px;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: var(--secondary-color);
-    color: var(--accent1-color);
+    box-shadow: 0 2px 5px rgba(242, 242, 242, 0.6);
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
     font-family: "Montserrat", sans-serif;
     align-content: center;
 }
@@ -135,7 +138,7 @@ dialog button {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.2em;
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
 }
 
 #currency-converter label {
@@ -143,8 +146,8 @@ dialog button {
     margin-top: 10px;
 }
 
-#currency-converter input, 
-#currency-converter select, 
+#currency-converter input,
+#currency-converter select,
 #currency-converter button {
     width: 100%;
     padding: 10px;
@@ -152,8 +155,8 @@ dialog button {
 }
 
 #currency-converter button {
-    background-color: var(--accent1-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
     border: none;
     cursor: pointer;
     margin-top: 20px;
