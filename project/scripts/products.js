@@ -253,33 +253,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
     }
 
-
     // Fetch products on page load
-    document.getElementById('category1').addEventListener('click', () => {
-        createProducts('motherboards'),
-        showProducts('motherboards');
-    });
-    document.getElementById('category2').addEventListener('click', () => {
-        createProducts('graphic'),
-        showProducts('graphic');
-    });
-    document.getElementById('category3').addEventListener('click', () => {
-        createProducts('processors'),
-        showProducts('processors');
-    });
-    document.getElementById('category4').addEventListener('click', () => {
-        createProducts('memory'),
-        showProducts('memory');
-    });
-    document.getElementById('category5').addEventListener('click', () => {
-        createProducts('monitors'),
-        showProducts('monitors');
-    });
-    document.getElementById('category6').addEventListener('click', () => {
-        createProducts('cases'),
-        showProducts('cases');
+    const category = ['motherboards', 'graphic', 'processors', 'memory', 'monitors', 'cases'];
+    category.forEach((category, index) => {
+        document.getElementById(`category${index + 1}`).addEventListener('click', () => {
+            createProducts(category);
+            showProducts(category);
+        });
     });
 
+    
     const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
     categories.forEach(category => {
         document.getElementById(category).addEventListener('click', function() {
