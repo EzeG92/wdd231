@@ -1,5 +1,9 @@
 @import url(base.css);
 
+picture img, picture source {
+    width: 100%;
+}
+
 .main-content {
     width: 100%;
     height: 100%;

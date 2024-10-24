@@ -35,6 +35,12 @@
     </header>
 
     <main>
+        <picture>
+            <source srcset="images/banner-form-desktop.webp" media="(min-width: 1024px)">
+            <source srcset="images/banner-form-desktop.webp" media="(min-width: 768px)">
+            <img src="images/banner-form.webp" alt="banner" loading="lazy">
+        </picture>
+
         <div class="main-content">
             <h1>Distributor<br>Application Form</h1>
             <form action="/submit_application" method="POST">
