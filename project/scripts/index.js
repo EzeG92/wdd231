@@ -1,6 +1,3 @@
-import { apiFetch } from "./api.js";
-// import { createProducts, showProducts, openProductModal, setupCloseButton} from './products.js';
-
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
 const navigation = document.querySelector('.navigation');
@@ -69,68 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         benefitsDetails.showModal();
     }
-
-    // // Fetch products on page load
-    // document.getElementById('category1').addEventListener('click', () => {
-    //     createProducts('motherboards'),
-    //     showProducts('motherboards');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-    // document.getElementById('category2').addEventListener('click', () => {
-    //     createProducts('graphic'),
-    //     showProducts('graphic');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-    // document.getElementById('category3').addEventListener('click', () => {
-    //     createProducts('processors'),
-    //     showProducts('processors');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-    // document.getElementById('category4').addEventListener('click', () => {
-    //     createProducts('memory'),
-    //     showProducts('memory');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-    // document.getElementById('category5').addEventListener('click', () => {
-    //     createProducts('monitors'),
-    //     showProducts('monitors');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-    // document.getElementById('category6').addEventListener('click', () => {
-    //     createProducts('cases'),
-    //     showProducts('cases');
-    //     openProductModal();
-    //     setupCloseButton();
-    // });
-
-    // const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
-    // categories.forEach(category => {
-    //     document.getElementById(category).addEventListener('click', function() {
-    //         // Remove 'active' class from all categories
-    //         categories.forEach(cat => {
-    //             document.getElementById(cat).classList.remove('active');
-    //             document.getElementById(cat + '-products').classList.remove('active');
-    //         });
-
-    //         // Add 'active' class to the clicked category
-    //         document.getElementById(category).classList.add('active');
-    //         document.getElementById(category + '-products').classList.add('active');
-
-    //         // Shows products from the selected category
-    //         showProducts(category);
-
-
-    //         // Scroll to the product bin
-    //         document.getElementById('product-title').scrollIntoView({ behavior: 'smooth' });
-    //     });
-    // });
 });
 
-apiFetch();
+
 
 

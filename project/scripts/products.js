@@ -1,3 +1,5 @@
+import { apiFetch } from "./api.js";
+
 const products = [
         {   id: 1,
             img: "images/mother1.webp",
@@ -300,5 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+apiFetch();
 
 
