@@ -71,9 +71,6 @@ main {
     color: var(--secondary-color);
 }
 
-dialog {
-    display: none;
-}
 
 ::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -93,25 +90,37 @@ dialog button {
     cursor: pointer;
 }
 
-.modal.open {
+.modal {
+    display: none; /* Asegúrate de que esté oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrar el modal */
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo */
+    background-color: var(--secondary-color); /* Color de fondo */
+    color: var(--primary-color); /* Color del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
     text-align: center;
-    display: grid;
     justify-items: center;
     font-weight: 600;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 20px;
-    border-radius: 8px;
     row-gap: 10px;
-    width: 80%;
-    max-width: 600px;
     border: none;
 }
 
-.modal.open  h2 {
+.modal[open] {
+    display: grid; /* Mostrar el modal cuando está abierto */
+    opacity: 1; /* Hacerlo visible */
+    transform: translate(-50%, -50%) scale(1.05); /* Escalar ligeramente al abrir */
+}
+
+.modal h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espaciado debajo del título */
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
@@ -119,7 +128,7 @@ dialog button {
 }
 
 #modal-image {
-    width: 300px;
+    width: 250px;
 }
 
 #currency-converter {

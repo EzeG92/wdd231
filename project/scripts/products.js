@@ -169,83 +169,136 @@ const products = [
         },
     ];
 
-export function createProducts(category) {
-    // Clear all product divs
-    const categoryContainers = {
-        motherboards: document.getElementById('category1-products'),
-        graphic: document.getElementById('category2-products'),
-        processors: document.getElementById('category3-products'),
-        memory: document.getElementById('category4-products'),
-        monitors: document.getElementById('category5-products'),
-        cases: document.getElementById('category6-products'),
-    };
-    
-    // Clear all product containers
-    Object.values(categoryContainers).forEach(container => container.innerHTML = '');
+document.addEventListener('DOMContentLoaded', () => {
+    function createProducts(category) {
+        // Clear all product divs
+        const categoryContainers = {
+            motherboards: document.getElementById('category1-products'),
+            graphic: document.getElementById('category2-products'),
+            processors: document.getElementById('category3-products'),
+            memory: document.getElementById('category4-products'),
+            monitors: document.getElementById('category5-products'),
+            cases: document.getElementById('category6-products'),
+        };
+        
+        // Clear all product containers
+        Object.values(categoryContainers).forEach(container => container.innerHTML = '');
 
-    // Filter products by category
-    const filteredProducts = products.filter(product => product.category === category);
+        // Filter products by category
+        const filteredProducts = products.filter(product => product.category === category);
 
-    // Append products to the appropriate category div
-    filteredProducts.forEach(product => {
-        const productDiv = document.createElement('div');
-        productDiv.classList.add('product');
-        productDiv.innerHTML = `
-            <img src="${product.img}" alt="${product.name}" data-title="${product.name}" data-description="${product.description ||'Description not available'}" class="product-img-modal">
-            <p>${product.name}</p>
-            <p>${product.price}</p>
-        `;
+        // Append products to the appropriate category div
+        filteredProducts.forEach(product => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+            productDiv.innerHTML = `
+                <img src="${product.img}" alt="${product.name}" data-title="${product.name}" data-description="${product.description ||'Description not available'}" class="product-img-modal">
+                <p>${product.name}</p>
+                <p>${product.price}</p>
+            `;
 
-        // Append to the correct category container
-        categoryContainers[product.category].appendChild(productDiv);
-    });
-}
-
-// Function to show products based on selected category
-export function showProducts() {
-    // Hide all product sections
-    const productSections = document.querySelectorAll('.products > div');
-    productSections.forEach(section => section.classList.add('hidden'));
-
-    // Show the products container and title
-    document.getElementById('products').classList.remove('hidden');
-    document.getElementById('product-title').classList.remove('hidden');
-    
-}
-
-export function openProductModal() {
-    const productModal = document.querySelectorAll('.product-img-modal');
-    productModal.forEach(product => {
-        product.addEventListener('click', () => {
-            const productTitle = product.getAttribute('data-title');
-            const productDescription = product.getAttribute('data-description');
-            const productImages = product.getAttribute('src');
-            displayProductsDetails(productTitle, productDescription, productImages);
+            // Append to the correct category container
+            categoryContainers[product.category].appendChild(productDiv);
         });
-    });
-}
 
-export function displayProductsDetails(title, description, imageSrc ) {
-    const productTitle = document.getElementById('modal-title');
-    const productDescription = document.getElementById('modal-description');
-    const productImages = document.getElementById('modal-image');
+        openProductModal();
+    }
 
-    productTitle.textContent = title;
-    productDescription.textContent = description;
-    productImages.src = imageSrc;
+    function openProductModal() {
+        const productModal = document.querySelectorAll('.product-img-modal');
+    
+        productModal.forEach(product => {
+            product.addEventListener('click', () => {
+                const productTitle = product.getAttribute('data-title');
+                const productDescription = product.getAttribute('data-description');
+                const productImages = product.getAttribute('src');
 
-    const productsDetails = document.getElementById('products-details');
-    productsDetails.classList.add('open');
-}
-
-export function setupCloseButton() {
-    const closeButton = document.getElementById('closeButton');
-    const productsDetails = document.getElementById('products-details');
-
-    if (closeButton && productsDetails) {
-        closeButton.addEventListener('click', () => {
-            productsDetails.classList.remove('open');
+                displayProductsDetails(productTitle, productDescription, productImages);
+            });
         });
     }
-}
+
+    function displayProductsDetails(title, description, imageSrc ) {
+        const productTitle = document.getElementById('modal-title');
+        const productDescription = document.getElementById('modal-description');
+        const productImages = document.getElementById('modal-image');
+
+        productTitle.textContent = title;
+        productDescription.textContent = description;
+        productImages.src = imageSrc;
+
+        const closeButton = document.getElementById('closeButton');
+        closeButton.onclick = closeModal;
+
+        const productsDetails = document.getElementById('products-details');
+        productsDetails.showModal();
+    }
+
+    function closeModal() {
+        const productsDetails = document.getElementById('products-details');
+        productsDetails.close();
+    }
+
+    // Function to show products based on selected category
+    function showProducts() {
+        // Hide all product sections
+        const productSections = document.querySelectorAll('.products > div');
+        productSections.forEach(section => section.classList.add('hidden'));
+
+        // Show the products container and title
+        document.getElementById('products').classList.remove('hidden');
+        document.getElementById('product-title').classList.remove('hidden');
+        
+    }
+
+
+    // Fetch products on page load
+    document.getElementById('category1').addEventListener('click', () => {
+        createProducts('motherboards'),
+        showProducts('motherboards');
+    });
+    document.getElementById('category2').addEventListener('click', () => {
+        createProducts('graphic'),
+        showProducts('graphic');
+    });
+    document.getElementById('category3').addEventListener('click', () => {
+        createProducts('processors'),
+        showProducts('processors');
+    });
+    document.getElementById('category4').addEventListener('click', () => {
+        createProducts('memory'),
+        showProducts('memory');
+    });
+    document.getElementById('category5').addEventListener('click', () => {
+        createProducts('monitors'),
+        showProducts('monitors');
+    });
+    document.getElementById('category6').addEventListener('click', () => {
+        createProducts('cases'),
+        showProducts('cases');
+    });
+
+    const categories = ['category1', 'category2', 'category3', 'category4', 'category5', 'category6'];
+    categories.forEach(category => {
+        document.getElementById(category).addEventListener('click', function() {
+            // Remove 'active' class from all categories
+            categories.forEach(cat => {
+                document.getElementById(cat).classList.remove('active');
+                document.getElementById(cat + '-products').classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked category
+            document.getElementById(category).classList.add('active');
+            document.getElementById(category + '-products').classList.add('active');
+
+            // Shows products from the selected category
+            showProducts(category);
+
+
+            // Scroll to the product bin
+            document.getElementById('product-title').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+});
+
 
