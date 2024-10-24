@@ -63,6 +63,22 @@ main {
     border-radius: 8px;
 }
 
+.viewMoreButton {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: var(--paragraph-font);
+    border: none;
+}
+
+.viewMoreButton a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 .benefits {
     background-color: var(--secondary-color);
     display: grid;
