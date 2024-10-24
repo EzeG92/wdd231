@@ -36,9 +36,11 @@
     </header>
 
     <main>
-        <div class="heroImage">
-            <img src="images/banner-products.webp" alt="hero image">
-        </div>
+        <picture>
+            <source srcset="images/banner-products-desktop.webp" media="(min-width: 1024px)">
+            <source srcset="images/banner-products-desktop.webp" media="(min-width: 768px)">
+            <img src="images/banner-products.webp" alt="banner" loading="lazy">
+        </picture>
 
         <div class="categoriesProducts">
             <h2>Categories</h2>

@@ -35,9 +35,11 @@
     </header>
 
     <main>
-        <div class="heroImage">
-            <img src="images/hero-image.webp" alt="hero image" width="100%">
-        </div>
+        <picture>
+            <source srcset="images/hero-image-desktop.webp" media="(min-width: 1024px)">
+            <source srcset="images/hero-image-desktop.webp" media="(min-width: 768px)">
+            <img src="images/hero-image.webp" alt="banner" loading="lazy">
+        </picture>
 
         <div class="callToAction">
             <h2><span>Take your sales to the next level.</span>

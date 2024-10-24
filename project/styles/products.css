@@ -4,8 +4,8 @@ main {
     background-color: var(--primary-color);
 }
 
-.heroImage img {
-    width : 100%;
+picture img, picture source {
+    width: 100%;
 }
 
 .categoriesProducts {
@@ -172,5 +172,15 @@ dialog button {
     margin-top: 20px;
     font-weight: bold;
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    
+}
+
 
 

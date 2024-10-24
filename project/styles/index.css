@@ -4,6 +4,10 @@ main {
     background-color: var(--primary-color);
 }
 
+picture img, picture source {
+    width: 100%;
+}
+
 .callToAction {
     display: grid;
     padding: 20px;
@@ -170,3 +174,12 @@ dialog h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     row-gap: 15px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    
+}
+
