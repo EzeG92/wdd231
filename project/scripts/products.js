@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
             productDiv.innerHTML = `
-                <img src="${product.img}" alt="${product.name}" data-title="${product.name}" data-description="${product.description ||'Description not available'}" class="product-img-modal">
+                <img src="${product.img}" alt="${product.name}" data-title="${product.name}" data-description="${product.description ||'Description not available'}" class="product-img-modal" loading="lazy">
                 <p>${product.name}</p>
                 <p>${product.price}</p>
             `;

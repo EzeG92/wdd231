@@ -27,8 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('visitCount', 1);
         localStorage.setItem('lastVisitTime', new Date().getTime());
         const welcomeMessage = document.getElementById('welcomeMessage');
-        welcomeMessage.innerHTML = `Welcome!<br>Complete the form so we can contact you.<br>Let us know if you have any questions.`;
-
+        welcomeMessage.innerHTML = `Welcome! Complete the form so we can contact you.<br>Let us know if you have any questions.`;
     } else {
         const currentTime = new Date().getTime();
         const timeDifference = currentTime - lastVisitTime;
