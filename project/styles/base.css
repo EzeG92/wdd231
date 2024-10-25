@@ -14,6 +14,12 @@
     margin: 0;
 }
 
+body {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
 header {
     display: grid;
     grid-template-columns: 0.2fr 1fr 0.2fr;

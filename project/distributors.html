@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezk Pc Store Home Page</title>
-    <meta name="description" content="Home Page of Ezk Pc Store">
+    <meta name="description" content="Distributors Form Page of Ezk Pc Store">
     <meta name="author" content="Ezequiel Gimenez">
-    <meta property="og:title" content="Home page Ezk Pc Store" />
+    <meta property="og:title" content="Form to distributors Ezk Pc Store" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
@@ -43,12 +43,13 @@
 
         <div class="main-content">
             <h1>Distributor<br>Application Form</h1>
-            <form action="/submit_application" method="POST">
+            <div id="form-message"></div>
+            <form action="thankyou.html" method="get" id="distributorForm">
                 <!-- Basic Company Information -->
                 <fieldset>
                     <legend>Basic Company Information</legend>
                     <label for="company-name">Company Name: *</label>
-                    <input type="text" id="company-name" name="company_name" required>
+                    <input type="text" id="company-name" name="company-name" required>
 
                     <label for="address">Business Address: *</label>
                     <input type="text" id="address" name="address" required>
@@ -67,13 +68,13 @@
                 <fieldset>
                     <legend>Primary Contact Information</legend>
                     <label for="contact-name">Full Name: *</label>
-                    <input type="text" id="contact-name" name="contact_name" required>
+                    <input type="text" id="contact-name" name="contact-name" required>
 
                     <label for="position">Position: *</label>
                     <input type="text" id="position" name="position" required>
 
                     <label for="contact-phone">Phone Number: *</label>
-                    <input type="tel" id="contact-phone" name="contact_phone" required>
+                    <input type="tel" id="contact-phone" name="contact-phone" required>
                 </fieldset>
 
                 <!-- Business Information -->
@@ -112,7 +113,7 @@
                         required></textarea>
                 </fieldset>
 
-                <button type="submit">Submit Application</button>
+                <button type="submit" class="submit">Submit Application</button>
             </form>
         </div>
 
