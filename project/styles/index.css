@@ -181,7 +181,6 @@ dialog h2 {
     display: grid;
     justify-items: center ;
     grid-template-columns: 1fr 1fr;
-    grid-row: 1fr;
     background-color: var(--secondary-color);
     padding: 20px;
 }
