@@ -19,19 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: "benefit1",
             title: "Exclusive Wholesale Pricing",
-            description: "As a distributor, you'll benefit from our wholesale pricing, designed to give you a competitive edge in the market. Whether you're looking to stock high-performance gaming gear or advanced design components, our pricing structure is tailored to maximize your profitability. You'll also receive regular updates on price drops and bulk order incentives to help you get the most value out of your partnership with us.",
+            description: "<strong>As a distributor, you'll benefit from our wholesale pricing, designed to give you a competitive edge in the market.</strong> Whether you're looking to stock <strong>high-performance gaming gear</strong> or <strong>advanced design components</strong>, our pricing structure is tailored to <strong>maximize your profitability.</strong> You'll also receive <strong>regular updates on price drops and bulk order incentives</strong> to help you get the most value out of your partnership with us.",
         },
 
         {
             id: "benefit2",
             title: "Priority Support",
-            description: "When you become one of our distributors, you're not just getting products—you're getting a full support system. Our priority support team is available to assist you with technical inquiries, order management, and product recommendations to ensure that you're always equipped to meet customer demands. Plus, you'll have access to marketing materials and sales strategies to help drive your business forward.",
+            description: "<strong>When you become one of our distributors, you're not just getting products—you're getting a full support system.</strong> Our <strong>priority support team</strong> is available to assist you with <strong>technical inquiries, order management, and product recommendations</strong> to ensure that you're always equipped to meet customer demands. Plus, you'll have access to <strong>marketing materials and sales strategies</strong> to help drive your business forward.",
         },
 
         {
             id: "benefit3",
             title: "Early Access to New Releases",
-            description: "Stay ahead of your competitors by securing early access to the newest gaming and design components. As a trusted distributor, you’ll be notified in advance of upcoming releases, allowing you to stock cutting-edge products before they hit the general market. This exclusive advantage means your customers will always find the latest and greatest tech when they shop with you.",
+            description: "<strong>Stay ahead of your competitors</strong> by securing <strong>early access to the newest gaming and design components.</strong> As a <strong>trusted distributor,</strong> you’ll be <strong>notified in advance of upcoming releases,</strong> allowing you to stock cutting-edge products before they hit the general market. This exclusive advantage means your customers will always find <strong>the latest and greatest tech</strong> when they shop with you.",
         }
     ]
 

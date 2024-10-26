@@ -15,6 +15,7 @@ picture img, picture source {
     text-align: center;
     row-gap: 25px;
     color: var(--secondary-color);
+    line-height: 1.5;
 }
 
 .callToAction h2 {
@@ -49,7 +50,6 @@ picture img, picture source {
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 40px 8px;
-    
 }
 
 .featuredContainer {
@@ -61,6 +61,9 @@ picture img, picture source {
 }
 
 .featuredContainer img {
+    width: 100%;
+    height: auto; 
+    max-width: 280px; 
     border-radius: 8px;
 }
 
@@ -85,6 +88,10 @@ picture img, picture source {
     text-align: center;
     row-gap: 25px;
     padding-bottom: 25px;
+}
+
+.benefits h2 {
+    padding: 0 20px;
 }
 
 .benefits div h2 {
@@ -167,13 +174,137 @@ dialog h2 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     row-gap: 15px;
+    line-height: 1.6;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 1500px) and (max-width: 1920px) {
+    main {
+        background-color: var(--secondary-color);
+    }
+
+    .picture {
+        position: relative;
+    }
+
+    .callToAction {
+        position: absolute; 
+        top: 15%;
+        left: 5%;
+        z-index: 10; 
+        background-color: rgba(0, 0, 0, 0.5); 
+        width: 500px;
+        height: 300px;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .callToAction h2 {
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .contactButton:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .featuredProducts {
+        row-gap: 50px;
+        justify-items: center;
+        padding: 40px 0;
+        margin: 0 50px;
+    }
+
+    .featuredProducts h2 {
+        font-size: 30px;
+    }
     
-}
+    .featuredContainer {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        column-gap: 50px;
+        justify-content: center;
+    }
 
-@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    .featuredContainer img {
+        max-width: 330px;
+        transform: scale(1);
+        transition: transform 0.6s;
+    }
+
+    .featuredContainer img:hover {
+        transform: scale(1.05);
+    }
     
-}
+    .viewMoreButton {
+        font-size: 18px;
+        transform: scale(1);
+        transition: transform 0.6s;
+    }
 
+    .viewMoreButton:hover {
+        transform: scale(1.05);
+        background-color: var(--accent1-color);
+    }
+
+
+    .benefits {
+        padding: 40px 0;
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 0;
+    }
+
+    .benefits h2 {
+        font-size: 30px;
+        padding-bottom: 20px;
+        grid-column: 1/4;
+    }
+
+    .benefits div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        padding: 20px;
+    } 
+
+    .benefits button {
+        transform: scale(1);
+        transition: transform 0.6s;
+    }
+
+    .benefits button:hover {
+        transform: scale(1.05);
+        background-color: var(--primary-color);
+    }
+
+    dialog button {
+        display: inline-block;
+        font-size: 25px;
+        position: absolute;
+        top: 33px;
+        right: 20px;
+        padding: 0.3rem 0.3rem;
+        border: none;
+        background: none;
+        align-self: center;
+        cursor: pointer;
+    }
+    
+    dialog h2 {
+        font-size: 22px;
+    }
+
+    .modal.open {
+        font-size: 20px;
+        width: 600px;
+        padding: 35px;
+        row-gap: 25px;
+        font-weight: 300;
+    }
+}
