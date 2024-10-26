@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (daysSinceLastVisit === 1) {
                 visitDayMessage.innerHTML = `You last visited ${daysSinceLastVisit} day ago. Is there anything we can help you?`;
             } else {
-                visitDayMessage.innerHTML = `You last visited ${daysSinceLastVisit} days ago. is there anything we can help you?`;
+                visitDayMessage.innerHTML = `You last visited ${daysSinceLastVisit} days ago. Is there anything we can help you?`;
             }
             localStorage.setItem('lastVisitTime', currentTime);
         }
