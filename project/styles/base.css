@@ -31,9 +31,15 @@ header {
     align-content: center;
 }
 
+.ezkLogo {
+    width: 150px;
+    grid-column: 2/3;
+}
+
 h1 {
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 16px;
+    font-weight: 600;
     grid-column: 2/3;
     color: var(--accent2-color);
 }
@@ -52,18 +58,15 @@ h1 {
 	text-align: center;
 	text-decoration: none;
     font-weight: 500;
-    color: var(--accent2-color);
+    color: var(--secondary-color);
 }
 
 .open a {
 	display: block;
 }
 
-.ezkLogo {
-    display: none;
-}
-
 #menuButton {
+    grid-column: 3/4;
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
@@ -71,13 +74,13 @@ h1 {
 
 #menuButton::before {
 	content: "☰";
-    color: var(--accent2-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
 }
 
 #menuButton.open::before {
     content: "X";
-    color: var(--accent2-color);
+    color: var(--secondary-color);
     font-size: 1.5rem; 
 }
 
@@ -93,26 +96,44 @@ footer {
     background-color: var(--accent2-color);
 }
 
-footer img {
-    margin: 8px;
+footer > img {
+    width: 150px;
+}
+
+footer > p {
+    font-size: 15px;
+    padding: 2px 0;
+}
+
+footer div {
+    display: flex;
+    column-gap: 15px;
+    padding: 2px 0;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
     header {
-        padding: 10px 50px;
-        grid-template-columns: 180px auto 30px;
+        padding: 10px 90px;
+        grid-template-columns: 180px 350px auto;
     }
 
     #menuButton {
         display: none;
     }
 
+    .ezkLogo {
+        width: 200px;
+        grid-column: 1/2;
+    }
+
     .navigation {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        grid-column: 3/5;
+        justify-content: end;
+        padding-right: 30px;
+        column-gap: 100px;
+        grid-column: 3/4;
+        grid-row: 1/2;
     }
 
     .navigation a {
@@ -123,16 +144,11 @@ footer img {
     }
 
     .navigation a:hover {
-        color: black;
+        color: var(--accent2-color);
         text-decoration: underline;
     }
 
-    .ezkLogo {
-        width: 150px;
-        height: auto;
-    }
-
     h1 {
-        font-size: 20px;
+        font-size: 16px;
     }
 }

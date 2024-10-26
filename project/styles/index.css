@@ -207,7 +207,7 @@ dialog h2 {
 
     .callToAction {
         position: absolute; 
-        top: 15%;
+        top: 25%;
         left: 5%;
         z-index: 10; 
         background-color: rgba(0, 0, 0, 0.5); 
@@ -269,7 +269,7 @@ dialog h2 {
 
     .benefits {
         padding: 40px 0;
-        width: 90%;
+        width: 83%;
         margin: 0 auto;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 0;
@@ -330,6 +330,6 @@ dialog h2 {
     .brands {
         display: flex;
         justify-content: space-around;
-        padding: 50px 80px;
+        padding: 50px 150px;
     }
 }
