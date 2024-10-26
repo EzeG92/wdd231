@@ -1,5 +1,5 @@
 //  Get the data from the API
-// const url = 'https://api.fxratesapi.com/latest?api_key=fxr_live_6304ed229a999613501abd46016d94c7b452';
+const url = 'https://api.fxratesapi.com/latest?api_key=fxr_live_6304ed229a999613501abd46016d94c7b452';
 
 //  Get JSON data from API
 export async  function apiFetch() {
