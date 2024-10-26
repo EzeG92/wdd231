@@ -61,6 +61,10 @@ h1 {
     color: var(--secondary-color);
 }
 
+.navigation a.active {
+    color: var(--accent2-color);
+}
+
 .open a {
 	display: block;
 }
@@ -150,5 +154,39 @@ footer div {
 
     h1 {
         font-size: 16px;
+    }
+
+    footer {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr auto;
+        align-items: center;
+        padding: 30px 50px;
+    }
+
+    footer > img {
+        width: 200px;
+    }
+
+    .address {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        line-height: 2;
+        font-size: 18px;
+    }
+
+    footer div {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        column-gap: 30px;
+    }
+
+    footer div img {
+        width: 25px;
+    }
+
+    #footer {
+        margin-top: 30px;
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 }

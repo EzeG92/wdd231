@@ -10,7 +10,7 @@ const products = [
         },
         {   id: 2,
             img: "images/mother2.webp",
-            name: "GIGABYTE AORUS X299",
+            name: "AORUS X299",
             category: "motherboards",
             price: "248.99",
             description:"The GIGABYTE AORUS X299 motherboard supports Intel Core X-series processors, with quad-channel DDR4 RAM and multi-GPU support. It features advanced cooling, dual M.2 slots, USB 3.1 Gen 2, and customizable RGB lighting, making it ideal for high-performance, enthusiast builds."
@@ -108,7 +108,7 @@ const products = [
         },
         {   id: 16,
             img: "images/ram4.webp",
-            name: "Hyperx DDR4 8Gb",
+            name: "Hyperx Fury DDR4 8Gb",
             category: "memory",
             price: "45.50",
             description: "The HyperX DDR4 8GB RAM module offers reliable performance with speeds up to 3200 MHz, making it suitable for gaming and everyday computing tasks. It features a stylish heat spreader for effective cooling and is optimized for compatibility with a wide range of motherboards, providing a great balance of performance and value."
@@ -143,7 +143,7 @@ const products = [
         },
         {   id: 21,
             img: "images/case1.webp",
-            name: 'Msi mag force M100A',
+            name: 'Msi mag M100A',
             category: "cases",
             price: "89.99",
             description: "The MSI MAG Forge M100A case features a sleek design with tempered glass panels and excellent airflow options. It supports up to ATX motherboards and offers ample space for multiple GPUs and cooling solutions. With customizable RGB lighting, a cable management system, and easy access to ports, it’s a great choice for gamers looking to build a stylish and efficient system."
