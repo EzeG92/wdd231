@@ -22,70 +22,78 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-columns: 100px auto 44px;
     background-color: var(--primary-color);
+    padding: 15px;
     column-gap: 10px;
-    padding: 25px;
-    justify-items: center;
     align-items: center;
     align-content: center;
 }
 
 .ezkLogo {
-    width: 150px;
-    grid-column: 2/3;
+    width: 110px;
 }
 
 h1 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 12px;
+    margin-top: 12px;
     font-weight: 600;
-    grid-column: 2/3;
     color: var(--accent2-color);
 }
 
-.navigation {
-	list-style: none;
-    width: 100%;
-    margin-top: 10px;
-    grid-column: 1/4;
-    border-radius: 8px;
+ul.navigation {
+    padding: 10px;
+    list-style-type: none;
 }
 
-.navigation a {
-	display: none;
-	padding: 0.7rem;
-	text-align: center;
+nav {
+    display: grid;
+    grid-template-rows: 0;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+nav ul {overflow: hidden;}
+
+nav.open {
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+ul.navigation li a {
+	display: block;
+	padding: .75rem 2vw;
 	text-decoration: none;
     font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
     color: var(--secondary-color);
 }
 
-.navigation a.active {
-    color: var(--accent2-color);
-}
-
-.open a {
-	display: block;
+li.current-menu-item a {
+    background-color: rgb(242, 242, 242, 0.2);
 }
 
 #menuButton {
-    grid-column: 3/4;
+    margin-top: 12px;
 	font-size: 1.5rem;
-	border: 0;
+	border: none;
 	background: none;
+    cursor: pointer;
 }
 
 #menuButton::before {
 	content: "☰";
     color: var(--secondary-color);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 #menuButton.open::before {
     content: "X";
     color: var(--secondary-color);
-    font-size: 1.5rem; 
+    font-size: 1.8rem; 
 }
 
 footer {
@@ -119,6 +127,13 @@ footer div {
     header {
         padding: 10px 90px;
         grid-template-columns: 180px 350px auto;
+        grid-template-rows: auto;
+        align-items: end;
+    }
+
+    header h1 {
+        font-size: 16px;
+        margin-bottom: 18px;
     }
 
     #menuButton {
@@ -126,34 +141,30 @@ footer div {
     }
 
     .ezkLogo {
-        width: 200px;
-        grid-column: 1/2;
+        width: 180px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: end;
+        padding: 0 90px;
+        grid-template-rows: 1fr;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        z-index: 1;
     }
 
     .navigation {
         display: flex;
         flex-direction: row;
         justify-content: end;
-        padding-right: 30px;
-        column-gap: 100px;
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-
-    .navigation a {
-        display: block;
-        padding: 0;
-        font-size: 18px;
-        text-transform: uppercase;
+        column-gap: 50px;
     }
 
     .navigation a:hover {
-        color: var(--accent2-color);
-        text-decoration: underline;
-    }
-
-    h1 {
-        font-size: 16px;
+        color: var(--primary-color);
+        background-color: var(--accent2-color);
     }
 
     footer {

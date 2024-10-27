@@ -218,7 +218,6 @@ dialog h2 {
 
     .callToAction h2 {
         font-size: 22px;
-        font-weight: 300;
     }
 
     .contactButton:hover {
@@ -227,7 +226,6 @@ dialog h2 {
 
     .featuredProducts {
         row-gap: 50px;
-        justify-items: center;
         padding: 40px 0;
         margin: 0 50px;
     }
@@ -265,7 +263,6 @@ dialog h2 {
         background-color: var(--accent1-color);
     }
 
-
     .benefits {
         padding: 40px 0;
         width: 83%;
@@ -284,11 +281,6 @@ dialog h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        width: 80%;
-        padding: 20px;
     } 
 
     .benefits button {
@@ -304,14 +296,8 @@ dialog h2 {
     dialog button {
         display: inline-block;
         font-size: 25px;
-        position: absolute;
         top: 33px;
         right: 20px;
-        padding: 0.3rem 0.3rem;
-        border: none;
-        background: none;
-        align-self: center;
-        cursor: pointer;
     }
     
     dialog h2 {

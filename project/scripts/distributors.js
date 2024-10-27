@@ -1,6 +1,6 @@
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector('#animateme');
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');

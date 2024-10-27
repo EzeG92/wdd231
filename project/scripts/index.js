@@ -1,6 +1,6 @@
 //add event listener to menu button and nav links
 const hamButton = document.querySelector('#menuButton');
-const navigation = document.querySelector('.navigation');
+const navigation = document.querySelector('#animateme');
 
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
@@ -66,14 +66,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         benefitsDetails.showModal();
     }
-});
-
-//add event listener to menu button and nav links
-const navLinks = document.querySelectorAll('.navigation a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        navLinks.forEach(nav => nav.classList.remove('active'));
-        this.classList.add('active');
-    });
 });
