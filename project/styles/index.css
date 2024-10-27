@@ -283,6 +283,10 @@ dialog h2 {
         align-items: center;
     } 
 
+    .benefits div p {
+        height: 100px;
+    }
+
     .benefits button {
         transform: scale(1);
         transition: transform 0.6s;
